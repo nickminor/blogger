@@ -42,10 +42,10 @@ server.use('/account', new AuthController().router)
 //NOTE next we want to register all our routes(doorways that can be accessed in our app)
 
 //NOTE we have to import access to our controllers
-import ValuesController from './controllers/ValuesController'
+import BlogController from './controllers/BlogController'
 
 //NOTE remember the forward slash at the start of your path!
-server.use('/api/values', new ValuesController().router)
+server.use('/api/blogs', new BlogController().router);
 
 
 
@@ -63,4 +63,4 @@ server.use('*', (req, res, next) => {
 })
 
 
-server.listen(port, () => { console.log(`Server is running on port: ${port}`) })
+server.listen(port, () => { console.log(`Server is running on port: ${port} you better go catch it`) })
